@@ -1,0 +1,15 @@
+/* Fontes do Google */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Tailwind v4 */
+@import "tailwindcss";
+
+:root {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+/* classe utilitária pra títulos */
+.heading-font {
+  font-family: "Playfair Display", serif;
+}

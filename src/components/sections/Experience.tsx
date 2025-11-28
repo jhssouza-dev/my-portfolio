@@ -1,12 +1,14 @@
+import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
+
 const experiences = [
   {
     title: "Frontend Developer - Projetos pessoais",
     period: "2023 - Atual",
     place: "Estudos e freelas",
     bullets: [
-      "Criação de interfaces SPA com React + Vite",
-      "Consumo de APIs REST, estado global leve",
-      "Forte foco em responsividade e detalhes visuais",
+      "Criação de interfaces SPA com React + Vite.",
+      "Consumo de APIs REST e organização do estado de forma simples.",
+      "Foco em responsividade, detalhes visuais e experiência do usuário.",
     ],
   },
   {
@@ -14,46 +16,83 @@ const experiences = [
     period: "2022 - Atual",
     place: "Cursos online / Bootcamps",
     bullets: [
-      "Fundamentos de HTML, CSS, JavaScript moderno",
-      "TypeScript, boas práticas e padrões de projeto",
-      "Versionamento com Git e GitHub",
+      "Fundamentos sólidos de HTML, CSS e JavaScript moderno.",
+      "TypeScript, boas práticas e padrões de projeto para frontend.",
+      "Versionamento com Git e GitHub em fluxo de trabalho real.",
     ],
   },
 ];
 
 export function Experience() {
-  return (
-    <section id="experience" className="px-6 py-16 bg-slate-50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-sm font-semibold tracking-[0.2em] text-gray-500 uppercase mb-2">
-          Experience
-        </h2>
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-          Um pouco da minha trajetória até aqui.
-        </h3>
+  const { ref, isVisible } = useRevealOnScroll();
 
-        <div className="space-y-6">
-          {experiences.map((exp) => (
-            <div
-              key={exp.title}
-              className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col gap-3"
-            >
-              <div className="flex items-center justify-between gap-2">
-                <div>
-                  <h4 className="font-semibold text-sm">{exp.title}</h4>
-                  <p className="text-[11px] text-gray-500">{exp.place}</p>
+  return (
+    <section
+      id="experience"
+      ref={ref}
+      className={`reveal px-6 py-14 md:py-20 ${
+        isVisible ? "reveal-visible" : ""
+      }`}
+    >
+      <div className="max-w-5xl mx-auto">
+        {/* HEADER */}
+        <div className="mb-10">
+          <h2 className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase mb-2 text-slate-500">
+            Experience
+          </h2>
+          <h3 className="heading-font text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900">
+            Um pouco da minha trajetória até aqui.
+          </h3>
+        </div>
+
+        {/* TIMELINE */}
+        <div className="relative pl-6 md:pl-10">
+          {/* linha vertical da timeline */}
+          <div className="absolute left-3 md:left-4 top-0 bottom-0 w-px bg-slate-200" />
+
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <div
+                key={exp.title}
+                className="relative flex gap-4 md:gap-6"
+              >
+                {/* ponto da linha */}
+                <div className="absolute left-0 md:left-1 mt-1.5">
+                  <div className="w-3 h-3 rounded-full bg-amber-500 border-2 border-white shadow-sm" />
                 </div>
-                <span className="text-[11px] text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                  {exp.period}
-                </span>
+
+                {/* conteúdo */}
+                <div className="ml-4 md:ml-6 flex-1">
+                  <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-4 md:p-5">
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                      <div>
+                        <h4 className="text-sm md:text-base font-semibold text-slate-900">
+                          {exp.title}
+                        </h4>
+                        <p className="text-[11px] md:text-xs text-slate-500">
+                          {exp.place}
+                        </p>
+                      </div>
+                      <span className="text-[11px] md:text-xs px-2 py-1 rounded-full bg-amber-50 text-amber-600 border border-amber-100">
+                        {exp.period}
+                      </span>
+                    </div>
+
+                    <ul className="text-xs md:text-[13px] text-slate-700 space-y-1.5 list-disc list-inside">
+                      {exp.bullets.map((b) => (
+                        <li key={b}>{b}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* conector inferior opcional (só não mostra no último) */}
+                  {index !== experiences.length - 1 && (
+                    <div className="ml-1 mt-2 h-4 border-l border-dashed border-slate-200 md:hidden" />
+                  )}
+                </div>
               </div>
-              <ul className="text-xs text-gray-700 space-y-1 list-disc list-inside">
-                {exp.bullets.map((b) => (
-                  <li key={b}>{b}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

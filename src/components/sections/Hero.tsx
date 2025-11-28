@@ -1,30 +1,20 @@
 import { scrollToSection } from "../../utils/scrollToSection";
 import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
-type HeroProps = {
-  theme: "light" | "dark";
-};
-
-export function Hero({ theme }: HeroProps) {
-  const isDark = theme === "dark";
-
+export function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-[80vh] flex items-center justify-center px-6"
+      className="min-h-[80vh] flex items-center justify-center px-6 py-12 md:py-20"
     >
       <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10">
         {/* FOTO – mobile primeiro */}
-        <div className="flex-1 flex justify-center md:justify-end order-1 md:order-2">
-          <div className="relative w-64 h-64">
+        <div className="flex-1 flex justify-center md:justify-end order-1 md:order-2 md:-mt-10">
+          <div className="relative w-64 h-64 sm:w-72 sm:h-72">
             {/* fundo “card” atrás da foto */}
-            <div
-              className={`absolute inset-0 rounded-full ${
-                isDark ? "bg-slate-800" : "bg-slate-200"
-              } translate-x-3 translate-y-3`}
-            />
+            <div className="absolute inset-0 rounded-full" />
             {/* foto redonda */}
-            <div className="relative w-full h-full rounded-full overflow-hidden bg-slate-500 shadow-lg">
+            <div className="relative w-full h-full rounded-full overflow-hidden">
               <img
                 src="/img.JPEG"
                 alt="Foto de perfil"
@@ -34,102 +24,76 @@ export function Hero({ theme }: HeroProps) {
           </div>
         </div>
 
-        {/* TEXTO – mobile depois */}
+        {/* TEXTO */}
         <div className="flex-1 order-2 md:order-1">
-          <p
-            className={`text-xs tracking-[0.25em] mb-4 uppercase ${
-              isDark ? "text-slate-400" : "text-slate-500"
-            }`}
-          >
+          <p className="text-xs tracking-[0.25em] mb-4 uppercase text-slate-500">
             Hello! MY NAME IS
           </p>
 
-          <h1
-            className={`heading-font text-4xl md:text-5xl font-bold mb-3 ${
-              isDark ? "text-amber-400" : "text-amber-700"
-            }`}
-          >
+          <h1 className="heading-font text-4xl md:text-5xl font-bold mb-3 text-amber-600">
             JOÃO SOUZA
           </h1>
 
-          <p className="text-sm md:text-base tracking-[0.2em] uppercase mb-6">
+          <p className="text-sm md:text-base tracking-[0.2em] uppercase mb-6 text-slate-700">
             Frontend Web Developer
           </p>
 
-          <p
-            className={`text-sm md:text-[15px] max-w-xl mb-8 ${
-              isDark ? "text-slate-300" : "text-slate-700"
-            }`}
-          >
+          <p className="text-sm md:text-[15px] max-w-xl mb-8 text-slate-700">
             Focado em construir interfaces modernas, responsivas e performáticas
             usando React, TypeScript e Tailwind. Gosto de transformar ideias em
             experiências digitais claras e elegantes.
           </p>
 
-          {/* Botão principal + socials */}
+          {/* Botões + socials */}
           <div className="flex flex-col gap-6">
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="/cv.pdf"
                 download
-                className={`inline-flex items-center justify-center rounded-full px-6 py-2 text-xs border transition ${
-                  isDark
-                    ? "border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-950"
-                    : "border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-slate-950"
-                }`}
+                className="inline-flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium border border-amber-500 bg-amber-500 text-slate-900 hover:bg-amber-600 hover:border-amber-600 transition-colors"
               >
                 Download CV
               </a>
 
               <button
                 onClick={() => scrollToSection("projects")}
-                className={`text-xs underline underline-offset-4 ${
-                  isDark ? "text-slate-200" : "text-slate-800"
-                }`}
+                className="group relative text-sm cursor-pointer font-medium text-slate-700 hover:text-amber-600 transition-colors"
               >
                 Ver projetos
+                <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-amber-500 transition-all duration-300 group-hover:w-full" />
               </button>
             </div>
 
             {/* Social icons */}
             <div className="flex gap-4">
-              {/* Instagram */}
-              <a
-                href="https://instagram.com/seuuser"
-                target="_blank"
-                className={`w-9 h-9 rounded-full flex items-center justify-center border transition ${
-                  isDark
-                    ? "border-slate-600 text-slate-200 hover:bg-slate-800"
-                    : "border-slate-300 text-slate-700 hover:bg-slate-200"
-                }`}
-              >
-                <FaInstagram size={16} />
-              </a>
-
               {/* GitHub */}
               <a
-                href="https://github.com/seuuser"
+                href="https://github.com/jhssouza-dev"
                 target="_blank"
-                className={`w-9 h-9 rounded-full flex items-center justify-center border transition ${
-                  isDark
-                    ? "border-slate-600 text-slate-200 hover:bg-slate-800"
-                    : "border-slate-300 text-slate-700 hover:bg-slate-200"
-                }`}
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full flex items-center justify-center border border-slate-200 bg-white shadow-sm hover:border-amber-500/70 hover:-translate-y-0.5 transition duration-200"
               >
-                <FaGithub size={16} />
+                <FaGithub size={20} className="text-amber-600" />
               </a>
 
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com/in/seuuser"
+                href="https://www.linkedin.com/in/jhssouza-dev/"
                 target="_blank"
-                className={`w-9 h-9 rounded-full flex items-center justify-center border transition ${
-                  isDark
-                    ? "border-slate-600 text-slate-200 hover:bg-slate-800"
-                    : "border-slate-300 text-slate-700 hover:bg-slate-200"
-                }`}
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full flex items-center justify-center border border-slate-200 bg-white shadow-sm hover:border-amber-500/70 hover:-translate-y-0.5 transition duration-200"
               >
-                <FaLinkedinIn size={16} />
+                <FaLinkedinIn size={20} className="text-amber-600" />
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/jhenriique"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full flex items-center justify-center border border-slate-200 bg-white shadow-sm hover:border-amber-500/70 hover:-translate-y-0.5 transition duration-200"
+              >
+                <FaInstagram size={20} className="text-amber-600" />
               </a>
             </div>
           </div>

@@ -26,3 +26,35 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ===== Scrollbar global com tema Amber ===== */
+
+/* Largura da barra */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Trilha (fundo da barra) */
+*::-webkit-scrollbar-track {
+  background: #fafafa; /* branco suave */
+}
+
+/* Thumb (barra que arrasta) */
+*::-webkit-scrollbar-thumb {
+  background-color: #f59e0b; /* amber-500 */
+  border-radius: 999px;
+  border: 2px solid #fafafa; /* dá espaço visual */
+  transition: background-color 0.2s ease;
+}
+
+/* Hover — mais escuro e mais elegante */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #d97706; /* amber-600 */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f59e0b #fafafa;
+}

@@ -2,46 +2,16 @@ import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
 
 const experiences = [
   {
-    title: "Frontend Developer - Projetos pessoais",
-    period: "2023 - Atual",
-    place: "Estudos e freelas",
+    title: "",
+    period: "",
+    place: "",
     bullets: [
-      "Criação de interfaces SPA com React + Vite.",
-      "Consumo de APIs REST e organização do estado de forma simples.",
-      "Foco em responsividade, detalhes visuais e experiência do usuário.",
+      "",
+      "",
+      "",
     ],
   },
-  {
-    title: "Formação e estudos",
-    period: "2022 - Atual",
-    place: "Cursos online / Bootcamps",
-    bullets: [
-      "Fundamentos sólidos de HTML, CSS e JavaScript moderno.",
-      "TypeScript, boas práticas e padrões de projeto para frontend.",
-      "Versionamento com Git e GitHub em fluxo de trabalho real.",
-    ],
-    
-  },
-  {
-    title: "Frontend Developer - Projetos pessoais",
-    period: "2023 - Atual",
-    place: "Estudos e freelas",
-    bullets: [
-      "Criação de interfaces SPA com React + Vite.",
-      "Consumo de APIs REST e organização do estado de forma simples.",
-      "Foco em responsividade, detalhes visuais e experiência do usuário.",
-    ],
-  },
-  {
-    title: "Frontend Developer - Projetos pessoais",
-    period: "2023 - Atual",
-    place: "Estudos e freelas",
-    bullets: [
-      "Criação de interfaces SPA com React + Vite.",
-      "Consumo de APIs REST e organização do estado de forma simples.",
-      "Foco em responsividade, detalhes visuais e experiência do usuário.",
-    ],
-  },
+ 
 ];
 
 export function Experience() {

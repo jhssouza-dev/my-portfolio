@@ -39,9 +39,7 @@ export function Hero() {
           </p>
 
           <p className="text-sm md:text-[15px] max-w-xl mb-8 text-slate-700">
-            Focado em construir interfaces modernas, responsivas e performáticas
-            usando React, TypeScript e Tailwind. Gosto de transformar ideias em
-            experiências digitais claras e elegantes.
+            Focused on building modern, responsive, and high-performance interfaces using React, TypeScript, and Tailwind. I enjoy turning ideas into clear and elegant digital experiences.
           </p>
 
           {/* Botões + socials */}
@@ -59,7 +57,7 @@ export function Hero() {
                 onClick={() => scrollToSection("projects")}
                 className="group relative text-sm cursor-pointer font-medium text-slate-700 hover:text-amber-600 transition-colors"
               >
-                Ver projetos
+                View projects
                 <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-amber-500 transition-all duration-300 group-hover:w-full" />
               </button>
             </div>

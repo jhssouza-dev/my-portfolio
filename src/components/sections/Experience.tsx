@@ -20,6 +20,27 @@ const experiences = [
       "TypeScript, boas práticas e padrões de projeto para frontend.",
       "Versionamento com Git e GitHub em fluxo de trabalho real.",
     ],
+    
+  },
+  {
+    title: "Frontend Developer - Projetos pessoais",
+    period: "2023 - Atual",
+    place: "Estudos e freelas",
+    bullets: [
+      "Criação de interfaces SPA com React + Vite.",
+      "Consumo de APIs REST e organização do estado de forma simples.",
+      "Foco em responsividade, detalhes visuais e experiência do usuário.",
+    ],
+  },
+  {
+    title: "Frontend Developer - Projetos pessoais",
+    period: "2023 - Atual",
+    place: "Estudos e freelas",
+    bullets: [
+      "Criação de interfaces SPA com React + Vite.",
+      "Consumo de APIs REST e organização do estado de forma simples.",
+      "Foco em responsividade, detalhes visuais e experiência do usuário.",
+    ],
   },
 ];
 
@@ -41,7 +62,7 @@ export function Experience() {
             Experience
           </h2>
           <h3 className="heading-font text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900">
-            Um pouco da minha trajetória até aqui.
+            A bit of my journey up to this point.
           </h3>
         </div>
 

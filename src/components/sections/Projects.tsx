@@ -36,7 +36,7 @@ export function Projects() {
               className="group flex flex-col h-full rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden transition-transform duration-200 hover:-translate-y-1 hover:shadow-md hover:border-amber-200"
             >
               {/* PREVIEW */}
-              <div className="relative h-32 sm:h-36 bg-gradient-to-br from-slate-100 via-slate-50 to-amber-50 flex items-center justify-center">
+              <div className="relative h-32 sm:h-36 bg-linear-to-br from-slate-100 via-slate-50 to-amber-50 flex items-center justify-center">
                 <div className="absolute inset-x-6 top-4 bottom-3 rounded-xl border border-slate-200/70 bg-white/60 backdrop-blur-[2px]" />
                 <div className="relative text-[11px] uppercase tracking-[0.18em] text-slate-500">
                   Preview

@@ -35,7 +35,7 @@ export function About() {
           </h2>
 
           <h3 className="heading-font text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900">
-            Quem sou, o que faço e no que acredito.
+            Who I am, what I do, and what I believe in.
           </h3>
         </div>
 
@@ -43,26 +43,22 @@ export function About() {
           {/* TEXTO */}
           <div className="space-y-4">
             <p className="text-sm md:text-[15px] leading-relaxed text-slate-700">
-              Sou um desenvolvedor frontend focado em criar interfaces claras,
-              responsivas e agradáveis de usar. Gosto de transformar layouts em
-              componentes bem estruturados e fáceis de manter, com atenção aos
-              detalhes visuais e à experiência do usuário.
+            I’m a frontend developer focused on creating clean, responsive, and pleasant-to-use interfaces. I enjoy turning layouts into well-structured, maintainable components, with attention to visual details and user experience.
             </p>
 
             <p className="text-sm md:text-[15px] leading-relaxed text-slate-700">
-              Hoje estudo e trabalho com foco em{" "}
+             Today I study and work with a focus on{" "}
               <span className="font-medium text-slate-900">
                 React, TypeScript e Tailwind
               </span>
-              , construindo aplicações modernas, performáticas e alinhadas com
-              as práticas que o mercado usa no dia a dia.
+              , building modern, high-performance applications aligned with the practices used in the industry on a daily basis.
             </p>
           </div>
 
           {/* CARD COM STACK */}
           <div className="rounded-2xl p-6 border bg-white border-slate-200 text-slate-800 shadow-sm">
             <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 mb-3">
-              Stack principal
+              Main tech stacks
             </p>
 
             <div className="grid grid-cols-4 gap-4 md:gap-5 mb-6 place-items-center">
@@ -81,11 +77,10 @@ export function About() {
 
             <div className="space-y-1">
               <p className="text-xs font-semibold text-slate-900">
-                O que eu procuro
+                What I’m looking for
               </p>
               <p className="text-xs text-slate-600">
-                Oportunidades para crescer em times que valorizam boas práticas,
-                código limpo, feedback constante e foco real no usuário.
+                Opportunities to grow in teams that value good practices, clean code, constant feedback, and a real focus on the user.
               </p>
             </div>
           </div>

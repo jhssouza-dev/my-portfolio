@@ -19,7 +19,7 @@ export function Navbar() {
           className="flex items-center gap-2"
         >
           <span className="heading-font text-lg sm:text-xl font-semibold cursor-pointer relative group text-slate-900">
-            João H Souza
+            João Souza
             <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-amber-500 transition-all duration-300 group-hover:w-full" />
           </span>
         </button>

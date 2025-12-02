@@ -19,12 +19,10 @@ export function Contact() {
             Contact
           </h2>
           <h3 className="heading-font text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900">
-            Vamos construir algo juntos?
+           Shall we build something together?
           </h3>
           <p className="mt-3 text-sm md:text-[15px] text-slate-600 max-w-2xl">
-            Se você viu potencial no meu trabalho e quer conversar sobre uma
-            vaga, freela ou colaboração, pode me chamar por e-mail ou pelas
-            redes abaixo. Respondo o mais rápido possível.
+            If you saw potential in my work and want to talk about a job opportunity, freelance project, or collaboration, feel free to reach out by email or through the social networks below. I’ll reply as soon as possible.
           </p>
         </div>
 
@@ -34,7 +32,7 @@ export function Contact() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <p className="text-xs uppercase tracking-[0.16em] text-slate-500 mb-1">
-                Email principal
+                Email
               </p>
               <div className="flex items-center gap-2">
                 <FiMail className="text-amber-500" size={18} />
@@ -42,7 +40,7 @@ export function Contact() {
                   href="mailto:seuemail@email.com"
                   className="font-medium text-slate-900 underline-offset-2 hover:underline hover:text-amber-600 transition-colors"
                 >
-                  seuemail@email.com
+                  jhssouza.it@gmail.com
                 </a>
               </div>
             </div>
@@ -51,7 +49,7 @@ export function Contact() {
               href="mailto:seuemail@email.com"
               className="inline-flex items-center justify-center px-5 py-2 rounded-full text-xs md:text-sm font-medium border border-amber-500 bg-amber-500 text-slate-900 hover:bg-amber-600 hover:border-amber-600 active:scale-95 transition duration-200"
             >
-              Enviar mensagem
+              Send message
             </a>
           </div>
 
@@ -66,12 +64,12 @@ export function Contact() {
                   LinkedIn
                 </p>
                 <a
-                  href="https://linkedin.com/in/seuuser"
+                  href="https://www.linkedin.com/in/jhssouza-dev/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[13px] font-medium text-slate-900 underline-offset-2 hover:underline hover:text-amber-600 transition-colors break-all"
                 >
-                  linkedin.com/in/seuuser
+                  linkedin.com/in/jhssouza-dev
                 </a>
               </div>
             </div>
@@ -85,24 +83,22 @@ export function Contact() {
                   GitHub
                 </p>
                 <a
-                  href="https://github.com/seuuser"
+                  href="https://github.com/jhssouza-dev"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[13px] font-medium text-slate-900 underline-offset-2 hover:underline hover:text-amber-600 transition-colors break-all"
                 >
-                  github.com/seuuser
+                  github.com/jhssouza-dev
                 </a>
               </div>
             </div>
 
             <div className="sm:col-span-1">
               <p className="text-xs uppercase tracking-[0.14em] text-slate-500 mb-1">
-                Como me abordar
+                How to approach me
               </p>
               <p className="text-xs md:text-[13px] text-slate-600">
-                Me conta em poucas linhas o contexto da vaga ou do projeto, o
-                que você está buscando e prazos. Assim eu consigo responder de
-                forma objetiva.
+               Tell me in a few lines the context of the job or project, what you’re looking for, and the timelines. This way I can reply more objectively.
               </p>
             </div>
           </div>

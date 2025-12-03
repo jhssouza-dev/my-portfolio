@@ -1,19 +1,15 @@
-import { useRevealOnScroll } from "../../hooks/useRevealOnScroll.ts";
-
-// ÍCONES
-import { FaReact, FaGitAlt, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss } from "react-icons/si";
-import { TbApi } from "react-icons/tb";
+import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
+import { techIcons } from "../../data/techIcons";
 
 const techStack = [
-  { label: "HTML", Icon: FaHtml5, colorClass: "text-orange-500" },
-  { label: "CSS", Icon: FaCss3Alt, colorClass: "text-blue-500" },
-  { label: "JavaScript", Icon: FaJs, colorClass: "text-yellow-500" },
-  { label: "TypeScript", Icon: SiTypescript, colorClass: "text-blue-600" },
-  { label: "React", Icon: FaReact, colorClass: "text-sky-500" },
-  { label: "Tailwind", Icon: SiTailwindcss, colorClass: "text-cyan-500" },
-  { label: "Git", Icon: FaGitAlt, colorClass: "text-orange-500" },
-  { label: "REST APIs", Icon: TbApi, colorClass: "text-amber-500" },
+  { key: "HTML" as const, label: "HTML" },
+  { key: "CSS" as const, label: "CSS" },
+  { key: "JavaScript" as const, label: "JavaScript" },
+  { key: "TypeScript" as const, label: "TypeScript" },
+  { key: "React" as const, label: "React" },
+  { key: "Tailwind" as const, label: "Tailwind" },
+  { key: "Git" as const, label: "Git" },
+  { key: "API" as const, label: "REST APIs" },
 ];
 
 export function About() {
@@ -43,15 +39,19 @@ export function About() {
           {/* TEXTO */}
           <div className="space-y-4">
             <p className="text-sm md:text-[15px] leading-relaxed text-slate-700">
-            I’m a frontend developer focused on creating clean, responsive, and pleasant to use interfaces. I enjoy turning layouts into well structured, maintainable components, with attention to visual details and user experience.
+              I’m a frontend developer focused on creating clean, responsive,
+              and pleasant to use interfaces. I enjoy turning layouts into
+              well structured, maintainable components, with attention to
+              visual details and user experience.
             </p>
 
             <p className="text-sm md:text-[15px] leading-relaxed text-slate-700">
-             Today I study and work with a focus on{" "}
+              Today I study and work with a focus on{" "}
               <span className="font-medium text-slate-900">
                 React, TypeScript e Tailwind
               </span>
-              , building modern, high-performance applications aligned with the practices used in the industry on a daily basis.
+              , building modern, high-performance applications aligned with the
+              practices used in the industry on a daily basis.
             </p>
           </div>
 
@@ -62,17 +62,24 @@ export function About() {
             </p>
 
             <div className="grid grid-cols-4 gap-4 md:gap-5 mb-6 place-items-center">
-              {techStack.map(({ label, Icon, colorClass }) => (
-                <div
-                  key={label}
-                  className="flex flex-col items-center justify-center gap-2 text-center transition-transform duration-200 hover:scale-105 ]"
-                >
-                  <Icon size={50} className={colorClass} />
-                  <p className="text-[11px] font-medium text-slate-600">
-                    {label}
-                  </p>
-                </div>
-              ))}
+              {techStack.map(({ key, label }) => {
+                const meta = techIcons[key];
+                if (!meta) return null;
+
+                const { Icon, colorClass } = meta;
+
+                return (
+                  <div
+                    key={key}
+                    className="flex flex-col items-center justify-center gap-2 text-center transition-transform duration-200 hover:scale-105"
+                  >
+                    <Icon size={50} className={colorClass + " drop-shadow-sm"} />
+                    <p className="text-[11px] font-medium text-slate-600">
+                      {label}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="space-y-1">
@@ -80,7 +87,8 @@ export function About() {
                 What I’m looking for
               </p>
               <p className="text-xs text-slate-600">
-                Opportunities to grow in teams that value good practices, clean code, constant feedback, and a real focus on the user.
+                Opportunities to grow in teams that value good practices, clean
+                code, constant feedback, and a real focus on the user.
               </p>
             </div>
           </div>

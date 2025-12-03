@@ -58,7 +58,7 @@ export function Hero() {
                 className="group relative text-sm cursor-pointer font-medium text-slate-700 hover:text-amber-600 transition-colors"
               >
                 View projects
-                <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-amber-500 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute left-0 -bottom-0.5 h-0.5 w-0 bg-amber-500 transition-all duration-300 group-hover:w-full" />
               </button>
             </div>
 

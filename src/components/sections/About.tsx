@@ -43,7 +43,7 @@ export function About() {
           {/* TEXTO */}
           <div className="space-y-4">
             <p className="text-sm md:text-[15px] leading-relaxed text-slate-700">
-            I’m a frontend developer focused on creating clean, responsive, and pleasant-to-use interfaces. I enjoy turning layouts into well-structured, maintainable components, with attention to visual details and user experience.
+            I’m a frontend developer focused on creating clean, responsive, and pleasant to use interfaces. I enjoy turning layouts into well structured, maintainable components, with attention to visual details and user experience.
             </p>
 
             <p className="text-sm md:text-[15px] leading-relaxed text-slate-700">

@@ -19,12 +19,10 @@ export function Projects() {
             Projects
           </h2>
           <h3 className="heading-font text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900">
-            Alguns projetos que representam meu código.
+            Some projects that represent my code..
           </h3>
           <p className="mt-3 text-sm md:text-[15px] text-slate-600 max-w-2xl">
-            Uma seleção de trabalhos focados em interfaces modernas, código
-            organizado e atenção aos detalhes. Sempre buscando equilíbrio entre
-            visual, performance e boas práticas.
+            A selection of works focused on modern interfaces, organized code, and attention to detail. Always striving for a balance between visuals, performance, and best practices
           </p>
         </div>
 

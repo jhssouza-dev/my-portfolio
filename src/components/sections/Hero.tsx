@@ -39,7 +39,7 @@ export function Hero() {
           </p>
 
           <p className="text-sm md:text-[15px] max-w-xl mb-8 text-slate-700">
-            Focused on building modern, responsive, and high-performance interfaces using React, TypeScript, and Tailwind. I enjoy turning ideas into clear and elegant digital experiences.
+            Focused on building modern, responsive, and high performance interfaces using React, TypeScript, and Tailwind. I enjoy turning ideas into clear and elegant digital experiences.
           </p>
 
           {/* Botões + socials */}

@@ -63,7 +63,7 @@ export function Projects() {
                     />
 
                     {/* Gradient overlay no hover */}
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-950/75 via-slate-950/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     {/* Badge “View preview” no hover */}
                     <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -157,7 +157,7 @@ export function Projects() {
       {/* MODAL */}
       {openImage && (
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm cursor-zoom-out"
+          className="fixed inset-0 z-9999 flex items-center justify-center bg-black/70 backdrop-blur-sm cursor-zoom-out"
           onClick={() => setOpenImage(null)}
         >
           <div

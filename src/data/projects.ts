@@ -9,6 +9,16 @@ export const projects = [
     highlight: "Featured",
     image: "/currency.png"
   },
+  {
+    id: 1,
+    name: "My portfolio",
+    description: "Convert values between different currencies in real time.",
+    techs: ["React", "TypeScript", "Tailwind", "Vite", "API"],
+    liveUrl: "https://currency-v2.vercel.app/",
+    repoUrl: "https://github.com/jhssouza-dev/currency_v2",
+    highlight: "Featured",
+    image: "/currency.png"
+  },
   
   
 ];

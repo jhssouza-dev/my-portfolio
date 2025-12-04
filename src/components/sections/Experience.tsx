@@ -21,7 +21,7 @@ export function Experience() {
     <section
       id="experience"
       ref={ref}
-      className={`reveal px-6 py-14 md:py-20 ${
+      className={`reveal min-h-[80vh] px-6 py-12 md:py-20 ${
         isVisible ? "reveal-visible" : ""
       }`}
     >

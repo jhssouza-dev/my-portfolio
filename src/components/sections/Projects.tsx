@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { projects } from "../../data/projects";
 import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
-import { techIcons, type TechKey } from "../../data/techIcons";
+import { techIcons, type TechKey } from "../techIcons";
 
 export function Projects() {
   const { ref, isVisible } = useRevealOnScroll();
@@ -22,7 +22,7 @@ export function Projects() {
     <section
       id="projects"
       ref={ref}
-      className={`reveal px-6 py-14 md:py-20 ${
+      className={`reveal min-h-[80vh] px-6 py-12 md:py-20 bg-slate-100 ${
         isVisible ? "reveal-visible" : ""
       }`}
     >

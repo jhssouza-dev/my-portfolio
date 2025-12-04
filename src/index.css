@@ -73,5 +73,9 @@
 .modal-fade-in {
   animation: modal-fade-in 0.18s ease-out;
 }
+section {
+  scroll-margin-top: 80px;
+}
+
 
 

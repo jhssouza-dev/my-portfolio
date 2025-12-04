@@ -102,7 +102,7 @@ export function Projects() {
                   )}
                 </div>
 
-                {/* TECHS COM ICONES COMPARTILHADOS */}
+                {/* TECHS COM ÍCONES COMPARTILHADOS */}
                 <div className="flex flex-wrap gap-2 text-[11px]">
                   {project.techs.map((tech) => {
                     const meta = techIcons[tech as TechKey];
@@ -156,31 +156,31 @@ export function Projects() {
 
       {/* MODAL */}
       {openImage && (
-        <div
-          className="fixed inset-0 z-9999 flex items-center justify-center bg-black/70 backdrop-blur-sm cursor-zoom-out"
-          onClick={() => setOpenImage(null)}
-        >
-          <div
-            className="modal-fade-in relative cursor-default max-w-[min(1200px,90vw)] max-h-[80vh]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Botão X */}
-            <button
-              onClick={() => setOpenImage(null)}
-              className="absolute -top-4 -right-4 bg-white text-slate-900 w-8 h-8 rounded-full shadow-lg flex items-center justify-center text-lg font-bold hover:bg-slate-100 transition"
-              aria-label="Close modal"
-            >
-              ×
-            </button>
+  <div
+    className="fixed inset-0 z-9999 flex items-center justify-center bg-black/70 backdrop-blur-sm cursor-zoom-out p-4"
+    onClick={() => setOpenImage(null)}
+  >
+    <div
+      className="modal-fade-in relative w-full max-w-[min(1200px,90vw)] max-h-[80vh] flex items-center justify-center"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Botão X */}
+      <button
+        onClick={() => setOpenImage(null)}
+        className="absolute top-2 right-2 bg-white text-slate-900 w-8 h-8 rounded-full shadow-lg flex items-center justify-center text-lg font-bold hover:bg-slate-100 transition"
+        aria-label="Close modal"
+      >
+        ×
+      </button>
 
-            <img
-              src={openImage}
-              alt="Project preview enlarged"
-              className="w-full h-full object-contain rounded-xl shadow-2xl"
-            />
-          </div>
-        </div>
-      )}
+      <img
+        src={openImage}
+        alt="Project preview enlarged"
+        className="w-full max-h-[70vh] object-contain rounded-xl shadow-2xl"
+      />
+    </div>
+  </div>
+)}
     </section>
   );
 }

@@ -7,7 +7,7 @@ export const projects = [
     liveUrl: "https://currency-v2.vercel.app/",
     repoUrl: "https://github.com/jhssouza-dev/currency_v2",
     highlight: "Featured",
-    image: "/public/currency.png"
+    image: "/currency.png"
   },
   
   

@@ -18,7 +18,7 @@ export function useRevealOnScroll() {
         });
       },
       {
-        threshold: 0.3, // antes era 0.2
+        threshold: 0.3, // conf aparecer na tela
       }
     );
 

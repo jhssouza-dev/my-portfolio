@@ -9,8 +9,8 @@ export function Projects() {
     <section
       id="projects"
       ref={ref}
-      className={`min-h-[80vh] px-6 py-12 md:py-20 bg-slate-100 ${
-        isVisible ? "reveal reveal-visible" : "reveal"
+      className={`reveal min-h-[80vh] px-6 py-12 md:py-20 bg-slate-100 ${
+        isVisible ? "reveal-visible" : ""
       }`}
     >
       <div className="max-w-5xl mx-auto">

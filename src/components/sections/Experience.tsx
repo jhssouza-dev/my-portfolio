@@ -1,4 +1,4 @@
-import { experiences  } from "../../data/experience";
+import { experiences } from "../../data/experience";
 import { education } from "../../data/education";
 import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
 
@@ -9,8 +9,8 @@ export function Experience() {
     <section
       id="experience"
       ref={ref}
-      className={`reveal min-h-[70vh] px-6 py-12 md:py-20 ${
-        isVisible ? "reveal-visible" : ""
+      className={`min-h-[80vh] px-6 py-12 md:py-20  ${
+        isVisible ? "reveal reveal-visible" : "reveal"
       }`}
     >
       <div className="max-w-5xl mx-auto">
@@ -54,9 +54,7 @@ export function Experience() {
 
           {/* EDUCATION BLOCK */}
           <div>
-            <h4 className="text-lg font-semibold text-slate-900">
-              Education
-            </h4>
+            <h4 className="text-lg font-semibold text-slate-900">Education</h4>
 
             {education.map((edu, idx) => (
               <div key={idx} className="mt-4 border-l-2 border-slate-300 pl-4">

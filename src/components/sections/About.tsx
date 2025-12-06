@@ -19,7 +19,7 @@ export function About() {
     <section
       id="about"
       ref={revealRef}
-      className={`reveal min-h-[80vh] px-6 py-12 md:py-20  bg-slate-100 ${
+      className={`reveal min-h-[80vh] px-6 py-12 md:py-20 bg-slate-100 ${
         isVisible ? "reveal-visible" : ""
       }`}
     >

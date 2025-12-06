@@ -1,6 +1,7 @@
 import { useState, useEffect,useRef } from "react";
 
-export function useRevealOnScroll() {
+// hook
+export function useRevealOnScroll(threshold = 0.3) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -17,16 +18,13 @@ export function useRevealOnScroll() {
           }
         });
       },
-      {
-        threshold: 0.3, // conf aparecer na tela
-      }
+      { threshold }
     );
 
     observer.observe(element);
 
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
 
   return { ref, isVisible };
 }
-

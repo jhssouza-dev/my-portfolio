@@ -3,7 +3,7 @@ import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
 import { techIcons, type TechKey } from "../techIcons";
 
 export function Projects() {
-  const { ref, isVisible } = useRevealOnScroll();
+  const { ref, isVisible } = useRevealOnScroll(0.1);
 
   return (
     <section

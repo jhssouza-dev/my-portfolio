@@ -36,7 +36,7 @@ export function Projects() {
               key={project.id}
               className="group flex flex-col h-full rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden transition-transform duration-200 hover:-translate-y-1 hover:shadow-md hover:border-amber-200"
             >
-              {/* IMAGEM FIXA DO PROJETO (MAIOR) */}
+              {/* IMAGEM DO PROJETO  */}
               <div className="relative w-full aspect-14/9 bg-white flex items-center justify-center overflow-hidden">
                 {project.image ? (
                   <img
